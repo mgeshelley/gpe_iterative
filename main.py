@@ -130,6 +130,8 @@ elif (mode=='iterative'):
     
     
     
+    ### CODE TO GET MINIMUMS FROM DATA BEFORE EMULATION ###
+    
     #raw_data = np.copy(final_data[:,2])
     #raw_data = raw_data.reshape(trimmed_dims)
     #raw_data = raw_data.T
