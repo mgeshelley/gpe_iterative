@@ -110,12 +110,12 @@ elif (mode=='iterative'):
         print ('Percentage of original data set = {0:.1%}'.format(start_points/num_all_points))
     print ('Size of original data set = %6d' % num_all_points)
     
-    ## Interpolate all_data onto grid of 21 Z values, and \rho values spaced roughly 0.00004 apart; remove densities containing NaNs after interpolation
-    #print ('Interpolating...')
-    #final_data, trimmed_dims = interp_surface(subset_data,interp_Z,interp_rho)
-    #print ('Interpolated onto {0:2d}x{1:4d} grid'.format(trimmed_dims[0],trimmed_dims[1]))
-    #num_interp = np.size(final_data,0)
-    #print ('Size of interpolated data set = %6d' % num_interp)
+    # Interpolate all_data onto grid of 21 Z values, and \rho values spaced roughly 0.00004 apart; remove densities containing NaNs after interpolation
+    print ('Interpolating...')
+    final_data, trimmed_dims = interp_surface(subset_data,interp_Z,interp_rho)
+    print ('Interpolated onto {0:2d}x{1:4d} grid'.format(trimmed_dims[0],trimmed_dims[1]))
+    num_interp = np.size(final_data,0)
+    print ('Size of interpolated data set = %6d' % num_interp)
 
     # Arrays for grid for emulating and plotting
     stand_x_pred = np.linspace(0.0,1.0,trimmed_dims[0])
